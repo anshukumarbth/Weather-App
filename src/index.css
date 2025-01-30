@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-image: url("http://getwallpapers.com/wallpaper/full/9/1/e/495944.jpg");
+    background-size: cover;   
+    background-position: center;
+    
+}
