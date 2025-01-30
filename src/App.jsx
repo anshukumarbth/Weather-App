@@ -51,7 +51,8 @@ function App() {
   const handleSearchClick = () => {
     setData(searchQuery);
   };
-
+  console.log(data);
+  
   useEffect(() => {
     if (celsius !== "") {
       if (celsius <= 0) {
@@ -68,11 +69,11 @@ function App() {
 
   return (
     <>
-      <h1 className="font-bold text-center text-transparent text-8xl bg-gradient-to-r from-purple-200 via-pink-400 to-red-600 bg-clip-text ">
+      <h1 className="text-4xl font-bold text-center text-transparent sm:text-6xl md:text-8xl bg-gradient-to-r from-purple-800 via-pink-500 to-red-300 bg-clip-text ">
         Weather App
       </h1>
-      <div className="absolute flex flex-wrap justify-center w-5/12 p-2 font-mono text-white transform -translate-x-1/2 -translate-y-1/2 border-2 border-black border-solid cursor-pointer top-1/2 left-1/2 h-4/6 rounded-3xl backgoundimage">
-        <div className="flex justify-center w-full gap-2 p-2 mt-2 rounded h-14">
+      <div className="absolute flex flex-wrap justify-center w-11/12 h-auto p-2 font-mono text-white transform -translate-x-1/2 -translate-y-1/2 border-2 border-black border-solid cursor-pointer sm:w-8/12 md:w-5/12 top-1/2 left-1/2 sm:h-4/6 rounded-3xl backgoundimage weather-container">
+        <div className="flex justify-center w-full gap-2 p-2 mt-2 rounded h-14 ">
           <input
             type="text"
             value={searchQuery}
@@ -87,28 +88,28 @@ function App() {
             Search
           </button>
         </div>
-        <div className="relative flex flex-col items-start justify-center gap-3 bottom-12">
-          <h1 className="ml-20 text-3xl text-transparent bg-gradient-to-r from-purple-200 via-pink-400 to-red-600 bg-clip-text">
+        <div className="relative flex flex-col items-start justify-center gap-3 bottom-2 weather-info">
+          <h1 className="ml-20 text-xl font-bold text-transparent sm:text-3xl md:text-3xl bg-gradient-to-r from-purple-200 via-pink-400 to-red-600 bg-clip-text">
             Address the weather condition
           </h1>
           <div className="flex flex-wrap justify-center w-full gap-2">
-            <div className="w-5/6 h-16 py-1 font-serif text-xl font-bold text-center border-2 border-black border-solid rounded hover:bg-green-300">
+            <div className="w-full h-16 py-1 font-serif text-lg font-bold text-center border-2 border-black border-solid rounded sm:w-5/6 sm:text-xl hover:bg-green-300">
               <h3>Country/State/City</h3>
               {country} / {state} / {data}
             </div>
-            <div className="w-5/6 h-16 py-1 font-serif text-xl font-bold text-center border-2 border-black border-solid rounded hover:bg-green-300">
+            <div className="w-full h-16 py-1 font-serif text-lg font-bold text-center border-2 border-black border-solid rounded sm:w-5/6 sm:text-xl hover:bg-green-300">
               <h3>Temperature in Celsius</h3>
               {celsius}°C
             </div>
-            <div className="w-5/6 h-16 py-1 font-serif text-xl font-bold text-center border-2 border-black border-solid rounded hover:bg-green-300">
+            <div className="w-full h-16 py-1 font-serif text-lg font-bold text-center border-2 border-black border-solid rounded sm:w-5/6 sm:text-xl hover:bg-green-300">
               <h3>Temperature in Fahrenheit</h3>
               {fahrenheit}°F
             </div>
-            <div className="w-5/6 h-16 py-1 font-serif text-xl font-bold text-center border-2 border-black border-solid rounded hover:bg-green-300">
+            <div className="w-full h-16 py-1 font-serif text-lg font-bold text-center border-2 border-black border-solid rounded sm:w-5/6 sm:text-xl hover:bg-green-300">
               <h3>Humidity & Pressure</h3>
               {humidity}% / {pressure} in
             </div>
-            <div className="w-5/6 h-16 py-1 font-serif text-xl font-bold text-center border-2 border-black border-solid rounded hover:bg-green-300">
+            <div className="w-full h-16 py-1 font-serif text-lg font-bold text-center border-2 border-black border-solid rounded sm:w-5/6 sm:text-xl hover:bg-green-300">
               <h3>Wind (Speed, Direction)</h3>
               {windMph} mph / {windKph} kph / {degree}° / {direction}
             </div>
